@@ -1,0 +1,58 @@
+.blog-page {
+    color: white;
+    margin: 0.5em 3em;
+
+    header {
+        height: 75vh;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    main {
+        .container-title {
+            padding: 3em 0;
+        }
+        .evenement-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 5em;
+            justify-content: space-between;
+        }
+        .informations {
+            margin: 2em 0;
+            position: relative;
+            z-index: 100;
+            display: flex;
+            justify-content: right;
+            
+            .enfant-info {
+                width: 78%;
+            }
+
+            form {
+                margin: 0.8em 0;
+                display: flex;
+                align-items: center;
+
+                input {
+                    width: 75%;
+                    height: 5vh;
+                    outline: none;
+                    padding-left: 1em;
+                    border: none;
+                }
+                button {
+                    border: none;
+                    background: orange;
+                    font-size: 1em;
+                    color: white;
+                    border-radius: 0 3px 3px 0;
+                    padding: 0.43em 1em;
+                }
+            }
+        }
+    }
+}

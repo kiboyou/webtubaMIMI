@@ -1,0 +1,35 @@
+@import './settings';
+
+
+//pages
+@import './pages/agence';
+@import './pages/contact';
+
+
+//components
+@import './components/header';
+@import './components/nav';
+@import './components/followUs';
+
+@import './components/footer';
+
+// Agence
+@import './components/title';
+@import './components/about';
+@import './components/projectCard';
+@import './components/agence/projet';
+@import "./components//agence/teams";
+
+
+// Blog components && page
+@import "./pages/blog";
+@import "./components/blog/actualite";
+@import "./components/blog/cardActualite";
+
+
+
+
+//components
+@import './components/design';
+
+@import './pages/home'

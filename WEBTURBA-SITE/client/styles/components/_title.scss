@@ -1,0 +1,21 @@
+.title {
+    // width: 40%;
+    // border: 1px solid;
+    // margin-left: auto;
+    .title-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+
+        h2 {
+            font-family: $m-bold;
+            font-size: 1rem;
+        }
+
+        span {
+            height: 2px;
+            width: 100px;
+            background: $orange;
+        }
+    }
+}

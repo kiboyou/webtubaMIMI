@@ -1,0 +1,62 @@
+// fonts
+@font-face {
+    font-family: "Montserrat-Bold";
+    src: url('../public/assets/fonts/Montserrat-Bold.ttf');
+}
+
+@font-face {
+    font-family: "Montserrat-ExtraBold";
+    src: url('../public/assets/fonts/Montserrat-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: "Montserrat-Medium";
+    src: url('../public/assets/fonts/Montserrat-Medium.ttf');
+}
+
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url('../public/assets/fonts/Montserrat-Regular.ttf');
+}
+
+
+
+//fonts variables
+$m-bold: Montserrat-Bold,
+sans-serif;
+$m-extraBold: Montserrat-ExtraBold,
+sans-serif;
+$m-medium: Montserrat-Medium,
+sans-serif;
+$m-regular: Montserrat-Regular,
+sans-serif;
+
+
+//colors
+$orange:#F17019;
+$blanc: #fff;
+$noir: #000000d1;
+
+
+
+* {
+    box-sizing: border-box;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+
+
+//mixin
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin x-center {
+    display: flex;
+    justify-content: center;
+}

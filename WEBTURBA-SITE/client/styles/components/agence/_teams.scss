@@ -1,0 +1,36 @@
+.container-teams {
+
+    .title {
+        margin-left: 10%;
+    }
+    .teams-card {
+        margin: 1.5em 3em;
+        
+        .team-image {
+            height: 90vh;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .container-image {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 2em;
+
+            .card-image {
+                width: 31%;
+                height: 43vh;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+
+}

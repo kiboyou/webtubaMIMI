@@ -1,0 +1,47 @@
+
+    .card-actualite {
+        display: flex;
+        justify-content: space-around;
+        background: $blanc;
+        color: black;
+        border-radius: 4px;
+        padding: 0.6em 0.8em;
+
+        &.event {
+            width: 30%;
+            height: 35vh;
+            margin-bottom: 1.5em;
+        }
+        .card-image {
+            width: 28%;
+            height: 24vh;
+            // border: 1px solid;
+            
+            &.image-event {
+                height: 30vh;
+                width: 35%;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: fill;
+            }
+        }
+
+        .content-actualite {
+            width: 65%;
+            // border: 1px solid;
+
+            &.event-actualite {
+                  width: 60%;
+                //   border: 1px solid; 
+            }
+
+            .date {
+                color: $orange;
+            }
+            .description {
+                text-align: justify;
+            }
+        }
+    }

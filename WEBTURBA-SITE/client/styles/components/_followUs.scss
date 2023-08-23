@@ -1,0 +1,41 @@
+.follow-us {
+
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    bottom: 100px;
+    right: -20px;
+    // height: 200px;
+
+
+    span {
+        svg {
+            color: white;
+            font-size: 1.5rem;
+        }
+        margin: 2px 0;
+    }
+
+    .bar {
+        height: 45px;
+        width: 2px;
+        background: white;
+        margin-top: 5px;
+        
+    }
+
+    .text {
+        position: relative;
+        margin-top: 44px;
+        font-size: 0.8rem;
+
+        p {
+            color: white;
+           font-family: $m-medium;
+            transform: rotate(90deg);
+        }
+    }
+}

@@ -1,0 +1,61 @@
+.navbar {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 300;
+    align-items: center;
+    padding: 25px 7.5%;
+    font-family: $m-medium;
+    ul {
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width: 415px) {
+            display: none;
+        }
+
+        li {
+            font-family: $m-medium;
+            font-weight: 500;
+            color: white;
+            transition: 0.2s;
+            z-index: 100;
+            cursor: pointer;
+
+            @media screen and (max-width: 769px) {
+                font-size: 0.9rem;
+            }
+
+
+            &:hover {
+                color: $orange;
+            }
+
+            &.active {
+                color: $orange;
+
+            }
+        }
+
+
+    }
+}
+.layout {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    z-index: 100;
+    background: black;
+    
+    .layout-fond {
+        background-image: url("../../public/assets/images/fond.png");     
+        background-position: center;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

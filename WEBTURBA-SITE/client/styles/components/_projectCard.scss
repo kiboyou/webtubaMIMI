@@ -1,0 +1,23 @@
+.project-card {
+    width: 31.5%;
+    margin: 1em 0;
+    .description {
+        text-align: justify;
+    }
+    .left {
+        text-align: justify;
+    }
+    .image-card {
+        float: right;
+        height: 18vh;
+        width: 32%;
+        margin-left: 0.6em;
+    }
+    img {
+        height: 100%;
+        width: 100%;
+        border-radius: 3px;
+        object-fit: cover;
+    }
+
+}

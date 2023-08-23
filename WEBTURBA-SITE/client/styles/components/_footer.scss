@@ -1,0 +1,23 @@
+.footer {
+    position: relative;
+    bottom: 0;
+    top: 0;
+    height: 6vh;    
+    width: 100%;
+    font-family: $m-medium;
+    background: $orange;
+    padding: 13px 0;
+    
+    .footer-content {
+        background-image: url("../../public/assets/images/footer.png");
+        height: 100%;
+        width: 100%;
+        color: $blanc;
+        @include flex-center;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        bottom: 0;
+        position: absolute;
+    }
+}

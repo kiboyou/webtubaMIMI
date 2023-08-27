@@ -5,7 +5,21 @@ import Title from "@/components/Title";
 import Actualite from "@/components/blog/actualite";
 import CardActualite from "@/components/blog/actualiteCard";
 
+import { useEffect } from "react";
+import { useDispatch, useSelector } from 'react-redux';
+import { getallBlog } from "@/reduxFiles/Blog/action";
+
+
 export default function index() {
+
+    const dispatch = useDispatch();
+    const Blogs = useSelector(state => state.blog);
+  
+    useEffect(() => {
+      dispatch(getallBlog());
+    }, [dispatch]);
+
+    console.log(Blogs)
 
     return (
         <div className="blog-page">
@@ -16,14 +30,15 @@ export default function index() {
                 <div className="container-title">
                     <Title title="A LA UNE" />
                 </div>
-                <Actualite />
+                <Actualite blogs={Blogs} />
+
                 <div className="evenement-container">
-                    <CardActualite taille="event" image="image-event" description="event-actualite" />
-                    <CardActualite taille="event" image="image-event" description="event-actualite" />
-                    <CardActualite taille="event" image="image-event" description="event-actualite" />
-                    <CardActualite taille="event" image="image-event" description="event-actualite" />
-                    <CardActualite taille="event" image="image-event" description="event-actualite" />
-                    <CardActualite taille="event" image="image-event" description="event-actualite" />
+                { 
+                    Blogs.map((item, index) => (
+                        <CardActualite taille="event" image="image-event" description="event-actualite" img={item.img} date={item.date} texte={item.texte} />
+                    ))
+                }
+
                 </div>
                 <div className="informations">
                     <div className="enfant-info">

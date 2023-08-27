@@ -8,7 +8,11 @@ import User1 from "../../public/assets/images/user1.png"
 
 
 
-export default function Actualite() {
+export default function Actualite({blogs}) {
+
+    console.log('====================================');
+    console.log(blogs);
+    console.log('====================================');
 
     return (
         <div className="component-actualite">
@@ -23,109 +27,25 @@ export default function Actualite() {
                     { maxWidth: 'sm', slideSize: '100%', slideGap: 0 },
                 ]}
             >
-                <Carousel.Slide>
-                    <CardActualite />
-                </Carousel.Slide>
-                <Carousel.Slide>
-                    <div className="card-actualite">
-                        <div className="card-image">
-                            <Image src={User2} alt="Utilisateur 1" />
-                        </div>
-                        <div className="content-actualite">
-                            <div className="date">
-                                <p>13 juillet 2023</p>
-                            </div>
-                            <div className="description">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                                    Error fuga tempore,
-                                    vitae reiciendis dolorum non facere mollitia 
-                                    doloremque esse autem!
-                                </p>
-                            </div>
-                        </div>
+            {blogs.map((item, index) => (
+                <Carousel.Slide key={index}>
+                <div className="card-actualite">
+                    <div className="card-image">
+                    <Image src={`${item.img}`} alt="Utilisateur 1" width="70" height="70" unoptimized/>
                     </div>
-                </Carousel.Slide>
-                <Carousel.Slide>
-                    <div className="card-actualite">
-                        <div className="card-image">
-                            <Image src={User3} alt="Utilisateur 1" />
-                        </div>
-                        <div className="content-actualite">
-                            <div className="date">
-                                <p>13 juillet 2023</p>
-                            </div>
-                            <div className="description">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                                    Error fuga tempore,
-                                    vitae reiciendis dolorum non facere mollitia 
-                                    doloremque esse autem!
-                                </p>
-                            </div>
-                        </div>
+                    <div className="content-actualite">
+                    <div className="date">
+                        <p>{item.date}</p>
                     </div>
-                </Carousel.Slide>
-                <Carousel.Slide>
-                    <div className="card-actualite">
-                        <div className="card-image">
-                            <Image src={User1} alt="Utilisateur 1" />
-                        </div>
-                        <div className="content-actualite">
-                            <div className="date">
-                                <p>13 juillet 2023</p>
-                            </div>
-                            <div className="description">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                                    Error fuga tempore,
-                                    vitae reiciendis dolorum non facere mollitia 
-                                    doloremque esse autem!
-                                </p>
-                            </div>
-                        </div>
+                    <div className="description">
+                        <p>
+                       {item.texte}
+                        </p>
                     </div>
-                </Carousel.Slide>
-                <Carousel.Slide>
-                    <div className="card-actualite">
-                        <div className="card-image">
-                            <Image src={User2} alt="Utilisateur 1" />
-                        </div>
-                        <div className="content-actualite">
-                            <div className="date">
-                                <p>13 juillet 2023</p>
-                            </div>
-                            <div className="description">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                                    Error fuga tempore,
-                                    vitae reiciendis dolorum non facere mollitia 
-                                    doloremque esse autem!
-                                </p>
-                            </div>
-                        </div>
                     </div>
+                </div>
                 </Carousel.Slide>
-                <Carousel.Slide>
-                    <div className="card-actualite">
-                        <div className="card-image">
-                            <Image src={User3} alt="Utilisateur 1" />
-                        </div>
-                        <div className="content-actualite">
-                            <div className="date">
-                                <p>13 juillet 2023</p>
-                            </div>
-                            <div className="description">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                                    Error fuga tempore,
-                                    vitae reiciendis dolorum non facere mollitia 
-                                    doloremque esse autem!
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </Carousel.Slide>
+            ))}
             </Carousel>
         </div>
     )

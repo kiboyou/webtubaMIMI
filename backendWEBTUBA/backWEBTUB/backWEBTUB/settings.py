@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'drf_yasg',
     'corsheaders',
     'client',
+    'blog',
     
     'rest_framework',
 ]

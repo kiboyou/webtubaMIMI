@@ -66,5 +66,6 @@ urlpatterns = [
 urlpatterns += [
     path('api-auth/', include('rest_framework.urls')),
     path('', include('client.urls')),
+    path('blog/', include('blog.urls')),
 
 ]
